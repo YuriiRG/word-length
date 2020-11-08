@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
-		<title>Word length statistics in English</title>
+		<title>Word length statistics</title>
 		<style>
 			#chart {
 				width: 100%;
@@ -17,13 +17,14 @@
 	</head>
 	<body>
 		<div id="content">
-			<h1>Word length statistics in English</h1>
+			<h1>Word length statistics in</h1>
 			<h2>Abstract</h2>
-			<p>This article is about statistics of word length in English. It answers about the mean length of words in English, and correlation with the popularity of it. Also, I wrote about how did I write technical side of this article.</p>
+			<p>This article is about statistics of word length. It answers about the mean length of words in English and Russian, and correlation with the popularity of it. Also, I wrote about how did I write technical side of this article.</p>
 			<h2>Statistics</h2>
 			<p>On this chart, you can see the count of words, with a different length. Here are using 20k most popular words and 10k most popular words datasets. Using 10k dataset, most popular (and mean) word length is 6 symbols. As we can see the difference between datasets, further is the word length from 6 symbols (longer), than it is less popular.</p>
+			<p>Also, there is the Russian language chart. Russian chart is similar but seems to be moved the right by 1 letter. The average Russian words are longer than English words.</p>
 			<div id="chart">
-				<canvas id="myChart">Fuck you, not a chart.</canvas>
+				<canvas id="myChart">Your browser doesn't support canvas. Update it!</canvas>
 			</div>
 			<h2>How did I make it</h2>
 			<p>I use Chart.js here because this is the only chart library which I know. To count words length I used Node.js script because insert an analysis of the dictionary into the page would be overhead. This script is <a href="readdata.js">here</a>.</p>
@@ -31,6 +32,7 @@
 			<ul>
 				<li><a href="https://www.chartjs.org">Chart.JS</a> &mdash; Charts.</li>
 				<li><a href="https://github.com/first20hours/google-10000-english">google-10000-english</a> &mdash; Most popular English words.</li>
+				<li><a href="https://klavogonki.ru/vocs/47500/">10000 самых частых слов</a> &mdash; Most popular Russian words.</li>
 			</ul>
 		</div>
 		

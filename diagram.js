@@ -3,6 +3,7 @@ var result10k = [26, 394, 664, 1100, 1367, 1491, 1449, 1157, 904, 608, 374, 207,
 //var result100k = [26, 93, 936, 3530, 6371, 10290, 12761, 14822, 14766, 12831, 9680, 6874, 4333, 4904];
 // 100k dict https://github.com/adambom/dictionary
 var result20k = [26, 570, 1491, 2016, 2570, 2930, 2943, 2491, 1957, 1362, 809, 459, 237, 139]; // 20k most popular
+var result10krus = [0, 38, 223, 644, 1135, 1433, 1509, 1456, 1238, 904, 603, 357, 219, 241];
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myLineChart = new Chart(ctx, {
@@ -44,6 +45,13 @@ var myLineChart = new Chart(ctx, {
 				result20k[12]/2,
 				result20k[13]/2,
 			],
+			fill: false
+		},
+		{
+			label: '10k most popular russian words',
+			backgroundColor: "orange",
+			borderColor: "orange",
+			data: result10krus,
 			fill: false
 		}],
 	},
