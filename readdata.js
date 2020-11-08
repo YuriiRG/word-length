@@ -1,6 +1,6 @@
 var fs = require("fs");
 var result = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-var jsonoriginal = JSON.parse(fs.readFileSync("10krus.json"));
+var jsonoriginal = JSON.parse(fs.readFileSync("dicts/10krus.json"));
 var keys = jsonoriginal.words;
 for (let i = 0; i < keys.length; i++) {
 	if (keys[i].length > 13) {
