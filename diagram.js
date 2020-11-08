@@ -26,7 +26,7 @@ var myLineChart = new Chart(ctx, {
 			fill: false
 		},
 		{
-			label: '20k most popular words normalized (num/10)',
+			label: '20k most popular words normalized (num/2)',
 			backgroundColor: "blue",
 			borderColor: "blue",
 			data: [
