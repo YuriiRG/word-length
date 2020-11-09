@@ -2,27 +2,42 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Word length statistics</title>
 		<style>
 			#chart {
 				width: 100%;
+			}
+			#mobile-warning {
+				padding: 2px;
+				border: 1px solid gray;
+				display: none;
 			}
 			#content {
 				width: 50%;
 				margin: 0 auto;
 				font-family: 'IBM Plex Sans', sans-serif;
 			}
+			@media (max-width: 1281px) {
+				#content {width: 75%;}
+			}
+			@media (max-width: 600px) {
+				#content {width: 100%}
+				#chart {display: none}
+				#mobile-warning {display: block}
+			}
 		</style>
 	</head>
 	<body>
 		<div id="content">
-			<h1>Word length statistics in</h1>
+			<h1>Word length statistics</h1>
 			<h2>Abstract</h2>
 			<p>This article is about statistics of word length. It answers about the mean length of words in English and Russian, and correlation with the popularity of it. Also, I wrote about how did I write technical side of this article.</p>
 			<h2>Statistics</h2>
-			<p>On this chart, you can see the count of words, with a different length. Here are using 20k most popular words and 10k most popular words datasets. Using 10k dataset, most popular (and mean) word length is 6 symbols. As we can see the difference between datasets, further is the word length from 6 symbols (longer), than it is less popular.</p>
+			<p>On this chart, you can see the count of words, with a different length. Here are using 20k most popular words and 10k most popular words datasets. Using 10k dataset, most popular (and avarage) word length is 6 symbols. As we can see the difference between datasets, further is the word length from 6 symbols (longer), than it is less popular.</p>
 			<p>Also, there is the Russian language chart. Russian chart is similar but seems to be moved the right by 1 letter. The average Russian words are longer than English words.</p>
+			<span id="mobile-warning">You can't see charts on mobile devices, only on PC.</span>
 			<div id="chart">
 				<canvas id="myChart">Your browser doesn't support canvas. Update it!</canvas>
 			</div>
